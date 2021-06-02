@@ -9,6 +9,8 @@
     --gradient-1: linear-gradient(315deg, #f2cf43 0%, #19a186 74%);
 }
 
+html { scroll-behavior: smooth; }
+
 body {
     min-height: 100vh;
     background-color: #eee;
