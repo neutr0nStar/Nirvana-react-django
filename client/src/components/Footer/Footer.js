@@ -4,7 +4,13 @@ import FooterCss from "./Footer.module.css";
 function Footer() {
     return (
         <div className={FooterCss.root}>
-            Copyright © 2021 Sneharsh Belsare. All rights reserved
+            <span>Copyright © 2021 Sneharsh Belsare. All rights reserved</span>
+            <span
+                class={FooterCss.btt}
+                onClick={() => (document.documentElement.scrollTop = 0)}
+            >
+                Back to Top
+            </span>
         </div>
     );
 }

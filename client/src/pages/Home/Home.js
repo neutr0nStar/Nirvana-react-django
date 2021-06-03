@@ -1,22 +1,13 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 import HomeCss from "./Home.module.css";
 
 function Home() {
     return (
         <>
             <div className={HomeCss.backdrop}>
-                <nav>
-                    <div data-aos="fade-right" className={HomeCss.brandTitle}>
-                        Nirvana
-                    </div>
-                    <ul data-aos="fade-left">
-                        <li className={HomeCss.navItem}>Home</li>
-                        <li className={HomeCss.navItem}>Places</li>
-                        <li className={HomeCss.navItem}>About</li>
-                        <li className={HomeCss.navItem}>Sigup/Signin</li>
-                    </ul>
-                </nav>
+                <Navbar />
                 <main>
                     <div
                         data-aos="zoom-in"
@@ -85,15 +76,6 @@ function Home() {
                                     3. Cherish !!
                                 </li>
                             </ul>
-                        </div>
-                        <div class={HomeCss.btt}>
-                            <button
-                                onClick={() =>
-                                    (document.documentElement.scrollTop = 0)
-                                }
-                            >
-                                Back to top
-                            </button>
                         </div>
                     </div>
                 </main>
