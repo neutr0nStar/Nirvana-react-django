@@ -1,7 +1,13 @@
 from rest_framework import serializers
-from .models import Place
+from rest_framework.utils import field_mapping
+from .models import Place, Package
 
 class PlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Place
-        fields = ['id', 'name', 'description', 'picture']
+        fields = '__all__'
+
+class PackageSeializer(serializers.ModelSerializer):
+    class Meta:
+        model = Package
+        fields = '__all__'

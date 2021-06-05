@@ -1,1 +1,32 @@
-GET http://localhost:8000/api/places
+GET http://localhost:8000/api/places HTTP/1.1
+
+###
+
+GET http://localhost:8000/api/place/11 HTTP/1.1
+
+###
+
+POST http://localhost:8000/api/auth/obtainToken HTTP/1.1
+content-type: application/json
+
+{
+    "username": "john",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:8000/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "joedoee",
+    "password": "password",
+    "email": "some@email.com",
+    "first_name": "Joe",
+    "last_name": "Doe"
+}
+
+###
+GET http://localhost:8000/api/packages HTTP/1.1
+Authorization: Token 360de67e402560fe0e1fe5b85a83dd4f3c1b0174
