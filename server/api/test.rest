@@ -10,9 +10,14 @@ POST http://localhost:8000/api/auth/obtainToken HTTP/1.1
 content-type: application/json
 
 {
-    "username": "john",
+    "username": "joedoee",
     "password": "password"
 }
+
+###
+
+GET http://localhost:8000/api/auth/getUser HTTP/1.1
+Authorization: Token e5345e3c0ea3c8389fceb24eac5e65727e6cc356
 
 ###
 

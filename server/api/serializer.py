@@ -1,6 +1,11 @@
 from rest_framework import serializers
-from rest_framework.utils import field_mapping
+from django.contrib.auth.models import User
 from .models import Place, Package
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'first_name', 'last_name', 'email')
 
 class PlaceSerializer(serializers.ModelSerializer):
     class Meta:

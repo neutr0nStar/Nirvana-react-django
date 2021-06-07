@@ -22,10 +22,7 @@ class Package(models.Model):
     destination = models.ForeignKey(Place, on_delete=models.CASCADE)
     no_of_people = models.IntegerField()
     no_of_days = models.IntegerField()
-
-    @property
-    def price(self) -> int:
-        return int(self.no_of_days) * 2000 * int(self.no_of_people)
+    price = models.IntegerField()
 
     def __str__(self) -> str:
         return f"{self.owner} {self.destination.name}"

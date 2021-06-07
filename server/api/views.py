@@ -4,9 +4,10 @@ from django.contrib.auth.models import User
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
 
 from .models import Place
-from .serializer import PackageSeializer, PlaceSerializer
+from .serializer import UserSerializer, PackageSeializer, PlaceSerializer
 
 # Create your views here.
 
@@ -32,6 +33,13 @@ def get_place(request, pk):
     except:
         return Response(status=404)
 
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_user(request):
+    user = request.user
+    user_serialized = UserSerializer(user)
+    return Response(user_serialized.data)
 
 
 @api_view(['GET'])
@@ -69,6 +77,7 @@ def register(request):
         new_user.last_name = last_name
         new_user.set_password(password)
         new_user.save()
-        return Response(status=200)
+        token = Token.objects.get(user=new_user)
+        return Response({"token": token.key}, status=200)
     except:
         return Response(status=406)
