@@ -1,0 +1,100 @@
+.root {
+    background-image: url(./unsplash-silas-baisch.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container {
+    height: calc(100vh - 6rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 30vw;
+    min-width: 500px;
+    height: 60vh;
+    min-height: 600px;
+    /* mix-blend-mode: screen; */
+    color: white;
+}
+
+.card h1 {
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card .err {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(240, 0, 0, 0.4);
+}
+
+.form {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form .label {
+    font-size: 1.6rem;
+    margin: 0.4rem;
+}
+
+.textInput {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border-radius: 0.8rem;
+}
+
+.textInput:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+.submitContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.submitBtn {
+    border: 2px solid white;
+    margin-top: 4rem;
+    width: 80%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submitBtn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dha {
+    display: flex;
+    justify-content: center;
+}
+
+.a {
+    text-decoration: none;
+    color: green;
+}

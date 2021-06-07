@@ -1,9 +1,10 @@
 .root {
-    background-image: url(./unsplash-david-marcu-4.jpg);
+    background-image: url(./unsplash-silas-baisch-2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
@@ -20,27 +21,4 @@
     border-radius: 2rem;
     min-height: 100vh;
     padding: 2rem;
-}
-
-.body ul {
-    list-style-type: none;
-}
-
-.title {
-    font-size: 3rem;
-    margin: 2rem;
-    font-family: 'Lobster', cursive;
-    display: flex;
-    justify-content: center;
-}
-
-.caption {
-    margin: 0rem auto 2rem auto;
-    display: flex;
-    justify-content: center;
-}
-
-.placesCardList {
-    display: grid;
-    grid-template-columns: auto auto;
 }

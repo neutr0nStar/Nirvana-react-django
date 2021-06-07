@@ -6,7 +6,7 @@ function Footer() {
         <div className={FooterCss.root}>
             <span>Copyright © 2021 Sneharsh Belsare. All rights reserved</span>
             <span
-                class={FooterCss.btt}
+                className={FooterCss.btt}
                 onClick={() => (document.documentElement.scrollTop = 0)}
             >
                 Back to Top

@@ -25,12 +25,19 @@ function Navbar(props) {
                             About
                         </Link>
                     </li>
-                    <li className={NavbarCSS.navItem}>
-                        <Link className={NavbarCSS.link} to="">
-                            Sigup
-                        </Link>
-                        /Signin
-                    </li>
+                    {localStorage.nirvanaToken ? (
+                        <li className={NavbarCSS.navItem}>
+                            <Link className={NavbarCSS.link} to="/account">
+                                Account
+                            </Link>
+                        </li>
+                    ) : (
+                        <li className={NavbarCSS.navItem}>
+                            <Link className={NavbarCSS.link} to="/login">
+                                Login
+                            </Link>
+                        </li>
+                    )}
                 </ul>
             </nav>
         </div>

@@ -32,13 +32,6 @@ function Places() {
     return (
         <div className={PlacesCSS.root}>
             <Navbar />
-            {/* <PlaceModal
-                isOpen={isOpen}
-                handleClose={handleClose}
-                bgUrl={"/media/places/switzerland.jpg"}
-                name="Switzerland"
-                desc="Some description of some destination"
-            /> */}
             <main className={PlacesCSS.bodyContainer}>
                 <div className={PlacesCSS.body}>
                     <div className={PlacesCSS.title}>
@@ -50,7 +43,7 @@ function Places() {
                     {loading ? (
                         <Loading />
                     ) : (
-                        <ul>
+                        <ul className={PlacesCSS.placesCardList}>
                             {places.map((place) => (
                                 <li key={place.id}>
                                     <PlacesCard

@@ -5,6 +5,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Home from "./pages/Home/Home";
 import Places from "./pages/Places/Places";
+import Login from "./pages/Login/Login";
+import Account from "./pages/Account/Account";
 
 function App() {
     AOS.init();
@@ -16,6 +18,12 @@ function App() {
                 </Route>
                 <Route path="/places">
                     <Places />
+                </Route>
+                <Route path="/login">
+                    <Login />
+                </Route>
+                <Route path="/account">
+                    <Account />
                 </Route>
             </Switch>
         </Router>

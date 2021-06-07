@@ -1,12 +1,14 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import PlaceModalCSS from "./PlaceModal.module.css";
 import { Link } from "react-router-dom";
 
 function PlaceModal({ isOpen, handleClose, bgUrl, name, desc }) {
     if (!isOpen) return null;
-    return (
+    return ReactDOM.createPortal(
         <div className={PlaceModalCSS.modalbg}>
             <div
+                data-aos="fade-down"
                 style={{
                     backgroundImage: "url(http://localhost:8000" + bgUrl + ")",
                 }}
@@ -29,7 +31,8 @@ function PlaceModal({ isOpen, handleClose, bgUrl, name, desc }) {
                     &times;
                 </span>
             </div>
-        </div>
+        </div>,
+        document.getElementById("modal")
     );
 }
 

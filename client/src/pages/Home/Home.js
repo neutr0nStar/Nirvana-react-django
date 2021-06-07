@@ -60,7 +60,7 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div class={HomeCss.CTA}>
+                        <div className={HomeCss.CTA}>
                             <h1>
                                 Nirvana brings you closer to the best nature has
                                 to offer in three simple steps !!
