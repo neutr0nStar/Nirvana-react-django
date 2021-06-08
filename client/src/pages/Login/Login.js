@@ -51,7 +51,7 @@ export default function Login() {
                     <h1>Login</h1>
                     {loginErr && (
                         <div className={LoginCSS.err}>
-                            Unable To login with those credentials !
+                            Unable to login with those credentials !
                         </div>
                     )}
                     <form className={LoginCSS.form}>
@@ -103,7 +103,7 @@ export default function Login() {
                     </form>
                     <div className={LoginCSS.dha}>
                         Don't have an accoutn ?
-                        <Link to="" className={LoginCSS.a}>
+                        <Link to="/register" className={LoginCSS.a}>
                             &nbsp;Register
                         </Link>
                     </div>

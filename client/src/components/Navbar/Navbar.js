@@ -21,7 +21,7 @@ function Navbar(props) {
                         </Link>
                     </li>
                     <li className={NavbarCSS.navItem}>
-                        <Link className={NavbarCSS.link} to="">
+                        <Link className={NavbarCSS.link} to="/about">
                             About
                         </Link>
                     </li>
