@@ -19,13 +19,14 @@ class Place(models.Model):
 
 class Package(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    destination = models.ForeignKey(Place, on_delete=models.CASCADE)
+    destination = models.CharField(max_length=100)
     no_of_people = models.IntegerField()
     no_of_days = models.IntegerField()
     price = models.IntegerField()
+    starting_date = models.DateField()
 
     def __str__(self) -> str:
-        return f"{self.owner} {self.destination.name}"
+        return f"{self.owner} {self.destination}"
 
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)

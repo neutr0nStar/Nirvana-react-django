@@ -23,7 +23,7 @@ function Places() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/places")
+            .get("/api/places")
             .then((res) => setPlaces(res.data))
             .then(() => setLoading(false))
             .catch((err) => console.error(err));

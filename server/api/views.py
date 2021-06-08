@@ -46,7 +46,7 @@ def get_user(request):
 @permission_classes([IsAuthenticated])
 def get_user_packages(request):
     user = request.user
-    packages = user.package_set.all()
+    packages = user.package_set.order_by('-starting_date')
     serialized_packages = PackageSeializer(packages, many=True)
     return Response(serialized_packages.data)
 

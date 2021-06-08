@@ -6,7 +6,7 @@ from .models import Place, Package
 
 class PackageAdmin(admin.ModelAdmin):
     list_display = ['owner', 'destination']
-    fields = ('owner', 'destination', ('no_of_people', 'no_of_days'), 'price')
+    fields = ('owner', 'destination','starting_date', ('no_of_people', 'no_of_days'), 'price')
 
 admin.site.register(Place)
 admin.site.register(Package, PackageAdmin)

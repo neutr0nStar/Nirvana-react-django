@@ -5,8 +5,7 @@ function PlacesCard(props) {
     return (
         <div
             style={{
-                backgroundImage:
-                    "url(http://localhost:8000" + props.picture + ")",
+                backgroundImage: "url(" + props.picture + ")",
             }}
             className={PlacesCardCSS.root}
         >

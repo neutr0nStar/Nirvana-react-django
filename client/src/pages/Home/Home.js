@@ -9,12 +9,8 @@ function Home() {
             <div className={HomeCss.backdrop}>
                 <Navbar />
                 <main>
-                    <div
-                        data-aos="zoom-in"
-                        className={HomeCss.cardContainer}
-                        style={{ mixBlendMode: "screen" }}
-                    >
-                        <div className={HomeCss.blurredCard}>
+                    <div className={HomeCss.cardContainer}>
+                        <div data-aos="zoom-in" className={HomeCss.blurredCard}>
                             <h1>Welcome to Nirvana</h1>
                         </div>
                     </div>

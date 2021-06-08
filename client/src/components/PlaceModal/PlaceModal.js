@@ -10,7 +10,7 @@ function PlaceModal({ isOpen, handleClose, bgUrl, name, desc }) {
             <div
                 data-aos="fade-down"
                 style={{
-                    backgroundImage: "url(http://localhost:8000" + bgUrl + ")",
+                    backgroundImage: "url(" + bgUrl + ")",
                 }}
                 className={PlaceModalCSS.modalCard}
             >

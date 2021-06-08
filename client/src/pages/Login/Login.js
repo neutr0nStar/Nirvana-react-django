@@ -22,7 +22,7 @@ export default function Login() {
         setLoading(true);
         setLoginErr(false);
         axios
-            .post("http://localhost:8000/api/auth/obtainToken", {
+            .post("/api/auth/obtainToken", {
                 username,
                 password,
             })
