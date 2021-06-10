@@ -8,8 +8,23 @@
     /* width: 75%; */
     height: 200px;
     display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.delBtn {
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.8);
+    cursor: pointer;
 }
 
 .title {

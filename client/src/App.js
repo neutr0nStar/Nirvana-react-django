@@ -9,6 +9,7 @@ import Login from "./pages/Login/Login";
 import Account from "./pages/Account/Account";
 import About from "./pages/About/About";
 import Register from "./pages/Register/Register";
+import TailorPackage from "./pages/TailorPackage/TailorPackage";
 
 function App() {
     AOS.init();
@@ -21,6 +22,9 @@ function App() {
                 </Route>
                 <Route path="/places">
                     <Places />
+                </Route>
+                <Route path="/tailorPackage/:id">
+                    <TailorPackage />
                 </Route>
                 <Route path="/about">
                     <About />

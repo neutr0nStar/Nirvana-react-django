@@ -191,7 +191,7 @@ export default function Register() {
                             ) : (
                                 <input
                                     type="submit"
-                                    value="Login"
+                                    value="Register"
                                     className={RegisterCSS.submitBtn}
                                     onClick={handleSubmit}
                                 />

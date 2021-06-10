@@ -12,10 +12,21 @@ export default function About() {
                     <div className={AboutCSS.title}>About</div>
                     <p className={AboutCSS.content}>
                         Nirvana is a tourism webiste that attempts to bring you
-                        closer to the best nature has to offer. To do so, select
-                        a destination from places, tailor a tour and enjoy the
+                        closer to the best nature has to offer, which can be
+                        done in 3 easy steps with the help of nirvana, select a
+                        destination from places, tailor a tour and enjoy the
                         beauty of nature. Nirvana offers a wide spectrum of
                         destinations, like Switzerland, Arizona, and many more.
+                    </p>
+                    <br />
+                    <br />
+                    <h2>
+                        <strong>Contact:</strong>
+                    </h2>
+                    <p className={AboutCSS.content}>
+                        Mobile: +919988776655
+                        <br />
+                        Email: support@nirvana.com
                     </p>
                     <br />
                     <br />
@@ -31,10 +42,7 @@ export default function About() {
                         error at pariatur porro vel cupiditate hic? Explicabo
                         dolores odit similique officia commodi quo aliquam
                         dolorem rerum vel debitis deleniti magnam, eos accusamus
-                        nisi totam ad culpa alias excepturi. Veritatis totam
-                        odio laborum aperiam ullam itaque enim nobis maiores,
-                        sed saepe recusandae neque quam minima aliquid velit
-                        ipsum? Aperiam, neque! Eveniet.
+                        nisi totam ad culpa alias excepturi.
                     </p>
                 </div>
             </main>

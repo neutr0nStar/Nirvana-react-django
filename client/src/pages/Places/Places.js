@@ -55,6 +55,7 @@ function Places() {
                                         isOpen={openModalId === place.id}
                                         handleClose={handleClose}
                                         bgUrl={place.picture}
+                                        placeID={place.id}
                                         name={place.name}
                                         desc={place.description}
                                     />

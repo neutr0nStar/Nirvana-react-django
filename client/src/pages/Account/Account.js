@@ -66,10 +66,12 @@ export default function Account() {
                                     {packages.map((p) => (
                                         <PackageCard
                                             key={p.id}
+                                            id={p.id}
                                             title={p.destination}
                                             sd={p.starting_date}
                                             nod={p.no_of_days}
                                             nop={p.no_of_people}
+                                            price={p.price}
                                         />
                                     ))}
                                 </div>

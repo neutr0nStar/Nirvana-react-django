@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import PlaceModalCSS from "./PlaceModal.module.css";
 import { Link } from "react-router-dom";
 
-function PlaceModal({ isOpen, handleClose, bgUrl, name, desc }) {
+function PlaceModal({ isOpen, handleClose, bgUrl, placeID, name, desc }) {
     if (!isOpen) return null;
     return ReactDOM.createPortal(
         <div className={PlaceModalCSS.modalbg}>
@@ -21,7 +21,9 @@ function PlaceModal({ isOpen, handleClose, bgUrl, name, desc }) {
                         <br />
                         <br />
                         <br />
-                        <Link to="/#">Tailor a tour !</Link>
+                        <Link to={"/tailorPackage/" + placeID}>
+                            Tailor a tour !
+                        </Link>
                     </div>
                 </div>
                 <span

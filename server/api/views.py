@@ -5,8 +5,9 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+import datetime
 
-from .models import Place
+from .models import Package, Place
 from .serializer import UserSerializer, PackageSeializer, PlaceSerializer
 
 # Create your views here.
@@ -32,6 +33,42 @@ def get_place(request, pk):
         return Response(place_serialized.data)
     except:
         return Response(status=404)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def create_package(request):
+    try:
+        starting_date = request.data['starting_date']
+        no_of_days = request.data['no_of_days']
+        no_of_people = request.data['no_of_people']
+        price = request.data['price']
+        place_id = request.data['place_id']
+        user = request.user
+        place = Place.objects.get(pk=place_id)
+        new_package = Package(
+            owner=user,
+            destination=place,
+            no_of_people=no_of_people,
+            no_of_days=no_of_days,
+            price=price,
+            starting_date=starting_date
+        )
+        new_package.save()
+        return Response(status=200)
+    except:
+        return Response(status=400)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def delete_package(request, pk):
+    try:
+        package = Package.objects.get(pk=pk)
+        package.delete()
+        return Response(status=200)
+    except:
+        return Response(status=400)
 
 
 @api_view(['GET'])

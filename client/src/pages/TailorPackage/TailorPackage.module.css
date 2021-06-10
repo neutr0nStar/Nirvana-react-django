@@ -1,0 +1,93 @@
+.root {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.right {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.title {
+    font-family: "Lobster", cursive;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.link {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.form {
+    font-size: 1.6rem;
+}
+
+.errmsg {
+    background-color: rgba(240, 0, 0, 0.4);
+    padding: 0.4rem 0.6rem;
+    margin: 1rem auto 2.5rem 0;
+    color: white;
+    border-radius: 0.4rem;
+}
+
+.inp {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 0.8rem;
+    width: 360px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.inp:focus {
+    outline: none;
+}
+
+.submitBtn {
+    margin-top: 2rem;
+    border: none;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
