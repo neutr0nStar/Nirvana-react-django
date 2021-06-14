@@ -26,18 +26,18 @@ export default function Register() {
         e.preventDefault();
         setRegisterErr("");
 
-        if (password.length < 6) {
-            setRegisterErr("Password too short");
-        } else if (password !== password2) {
-            setRegisterErr("Passwords don't match");
-        } else if (
+        if (
             firstName.length *
                 lastName.length *
                 email.length *
                 username.length ===
             0
         ) {
-            setRegisterErr("Fields cannot be left empyt");
+            setRegisterErr("Fields cannot be left empty");
+        } else if (password.length < 6) {
+            setRegisterErr("Password too short");
+        } else if (password !== password2) {
+            setRegisterErr("Passwords don't match");
         } else {
             axios
                 .post("/api/auth/register", {

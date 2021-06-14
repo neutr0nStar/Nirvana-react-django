@@ -19,7 +19,8 @@
     backdrop-filter: blur(8px);
     width: 85vw;
     border-radius: 2rem;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    height: min-content;
     padding: 2rem;
 }
 
@@ -45,6 +46,6 @@
 
 .packages {
     margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto;
 }

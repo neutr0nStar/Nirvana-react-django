@@ -9,7 +9,7 @@
 }
 
 .container {
-    height: calc(100vh - 6rem);
+    height: min-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,13 @@
 
 .card {
     margin: 1rem;
+    margin-bottom: 4rem;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
     padding: 2rem 1rem 2rem 3rem;
     border-radius: 1rem;
     width: 60vw;
-    min-width: 700px;
+    min-width: 600px;
     height: 80vh;
     min-height: 700px;
     color: white;

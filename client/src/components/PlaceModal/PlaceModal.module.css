@@ -15,12 +15,11 @@
 .modalCard {
     margin: 2rem;
     background-color: white;
-    width: 1280px;
-    height: 720px;
+    width: 75vw;
+    height: 90vh;
     border-radius: 2rem;
     padding: 2rem;
     overflow: hidden;
-    /* background-image: url("https://picsum.photos/1920/1280"); */
     background-position: center;
     background-repeat: no-repeat;
     position: relative;

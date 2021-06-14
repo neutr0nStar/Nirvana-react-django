@@ -109,7 +109,8 @@ export default function TailorPackage() {
                                         </div>
                                     )}
                                     <label htmlFor="starting_date">
-                                        Starting date: &nbsp;&nbsp;&nbsp;&nbsp;
+                                        Starting date:
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     </label>
                                     <input
                                         type="date"
@@ -124,7 +125,7 @@ export default function TailorPackage() {
                                     />
                                     <br />
                                     <label htmlFor="no_of_days">
-                                        Number of days:
+                                        Number of days: &nbsp;&nbsp;&nbsp;
                                     </label>
                                     <input
                                         type="number"
@@ -139,13 +140,13 @@ export default function TailorPackage() {
                                         onChange={(e) => setNod(e.target.value)}
                                     />
                                     <br />
-                                    <label htmlFor="no_of_days">
-                                        Number of days:
+                                    <label htmlFor="no_of_people">
+                                        Number of people:
                                     </label>
                                     <input
                                         type="number"
-                                        name="no_of_days"
-                                        id="no_of_days"
+                                        name="no_of_people"
+                                        id="no_of_people"
                                         required
                                         min={1}
                                         max={8}
@@ -155,6 +156,16 @@ export default function TailorPackage() {
                                         onChange={(e) => setNop(e.target.value)}
                                     />
                                     <br />
+                                    {startingDate && nop && nod && (
+                                        <div>
+                                            <hr />
+                                            <br />
+                                            Price:{" "}
+                                            <strong>
+                                                Rs. {8000 * nop * nod}
+                                            </strong>
+                                        </div>
+                                    )}
                                     <button
                                         className={TailorPackageCSS.submitBtn}
                                         onClick={handleSubmit}
