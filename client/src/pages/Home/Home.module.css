@@ -52,7 +52,7 @@
 
 
 .featuresContainer {
-    margin: 4rem;
+    margin: 5rem;
     display: flex;
     justify-content: space-around;
 }
@@ -69,6 +69,33 @@
 
 .featuresCard p {
     margin-bottom: 0.4rem;
+}
+
+.testimonialsContainer {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials {
+    max-width: 85vw;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.testimonial {
+    margin: 1rem 2rem;
+    padding: 1rem;
+    height: 200px;
+    width: 400px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    font-size: 1.1rem;
+}
+
+.testimonial h2 {
+    margin-bottom: 1rem;
 }
 
 .CTA {

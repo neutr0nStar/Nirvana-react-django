@@ -25,10 +25,9 @@ function Home() {
                             >
                                 <h1>Explore</h1>
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Magni, incidunt quas.
-                                    Dolorum fuga facilis eveniet vero illo?
-                                    Repudiandae, ipsam voluptas.
+                                    Explore beautiful landscapes, valleys and
+                                    mountains that truely reflect on the beauty
+                                    of earth.
                                 </p>
                             </div>
                             <div
@@ -37,10 +36,8 @@ function Home() {
                             >
                                 <h1>Discover</h1>
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Magni, incidunt quas.
-                                    Dolorum fuga facilis eveniet vero illo?
-                                    Repudiandae, ipsam voluptas.
+                                    Discover places, plants, animals and people
+                                    from all around the globe. Make new friends.
                                 </p>
                             </div>
                             <div
@@ -49,11 +46,50 @@ function Home() {
                             >
                                 <h1>Enjoy</h1>
                                 <p>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Magni, incidunt quas.
-                                    Dolorum fuga facilis eveniet vero illo?
-                                    Repudiandae, ipsam voluptas.
+                                    Cherish the picturesque views and aroma of
+                                    plants excluse to those landscapes. Take
+                                    back memories !
                                 </p>
+                            </div>
+                        </div>
+                        <div className={HomeCss.testimonialsContainer}>
+                            <h1>Testimonials</h1>
+                            <div className={HomeCss.testimonials}>
+                                <div
+                                    data-aos="zoom-in"
+                                    className={HomeCss.testimonial}
+                                >
+                                    <h2>John Doe</h2>
+                                    <p>
+                                        I really enjoyed exploring different
+                                        places through Nirvana, it gave me a
+                                        great opportunity to get to know how
+                                        beautiful nature can be.
+                                    </p>
+                                </div>
+                                <div
+                                    data-aos="zoom-in"
+                                    className={HomeCss.testimonial}
+                                >
+                                    <h2>James Carl</h2>
+                                    <p>
+                                        Absolutely love it !! Nirvana gave me a
+                                        package just made for me. The
+                                        destinations are chery picked, some of
+                                        the best places on earth.
+                                    </p>
+                                </div>
+                                <div
+                                    data-aos="zoom-in"
+                                    className={HomeCss.testimonial}
+                                >
+                                    <h2>Sara Williams</h2>
+                                    <p>
+                                        Never did I knew how badly I needed a
+                                        trip. Thanks to Nirvana for making it
+                                        possible.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className={HomeCss.CTA}>
@@ -65,10 +101,10 @@ function Home() {
                                 <li data-aos="zoom-in">
                                     1. Select a destination.
                                 </li>
-                                <li data-aos="zoom-in" data-aos-delay="500">
+                                <li data-aos="zoom-in" data-aos-delay="300">
                                     2. Tailor a package as per your need.
                                 </li>
-                                <li data-aos="zoom-in" data-aos-delay="1000">
+                                <li data-aos="zoom-in" data-aos-delay="600">
                                     3. Cherish !!
                                 </li>
                             </ul>
