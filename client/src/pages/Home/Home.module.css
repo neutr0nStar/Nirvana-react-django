@@ -72,10 +72,14 @@
 }
 
 .testimonialsContainer {
-    margin: 1rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.testimonialsContainer h1 {
+    font-size: 2.4rem;
 }
 
 .testimonials {
@@ -87,15 +91,22 @@
 .testimonial {
     margin: 1rem 2rem;
     padding: 1rem;
-    height: 200px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border: 2px solid rgba(0, 0, 0, 0.6);
     border-radius: 1rem;
     font-size: 1.1rem;
+    overflow: hidden;
 }
 
-.testimonial h2 {
-    margin-bottom: 1rem;
+.testimonial h2, .testimonial h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
 }
 
 .CTA {

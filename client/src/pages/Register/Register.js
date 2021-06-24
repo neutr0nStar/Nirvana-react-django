@@ -199,9 +199,9 @@ export default function Register() {
                         </div>
                     </form>
                     <div className={RegisterCSS.ha}>
-                        Already have an accoutn ?
+                        Already have an account ?&nbsp;
                         <Link to="/login" className={RegisterCSS.a}>
-                            &nbsp;Login
+                            Login
                         </Link>
                     </div>
                 </div>

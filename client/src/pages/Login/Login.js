@@ -102,9 +102,9 @@ export default function Login() {
                         </div>
                     </form>
                     <div className={LoginCSS.dha}>
-                        Don't have an accoutn ?
+                        Don't have an account ? &nbsp;
                         <Link to="/register" className={LoginCSS.a}>
-                            &nbsp;Register
+                            Register
                         </Link>
                     </div>
                 </div>

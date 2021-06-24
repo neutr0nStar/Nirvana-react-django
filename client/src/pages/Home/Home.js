@@ -60,6 +60,9 @@ function Home() {
                                     className={HomeCss.testimonial}
                                 >
                                     <h2>John Doe</h2>
+                                    <h4 className={HomeCss.portfolio}>
+                                        CEO, Anonymous
+                                    </h4>
                                     <p>
                                         I really enjoyed exploring different
                                         places through Nirvana, it gave me a
@@ -72,6 +75,9 @@ function Home() {
                                     className={HomeCss.testimonial}
                                 >
                                     <h2>James Carl</h2>
+                                    <h4 className={HomeCss.portfolio}>
+                                        Founder, Natural Inc.
+                                    </h4>
                                     <p>
                                         Absolutely love it !! Nirvana gave me a
                                         package just made for me. The
@@ -84,10 +90,14 @@ function Home() {
                                     className={HomeCss.testimonial}
                                 >
                                     <h2>Sara Williams</h2>
+                                    <h4 className={HomeCss.portfolio}>
+                                        Nature enthusiast
+                                    </h4>
                                     <p>
                                         Never did I knew how badly I needed a
                                         trip. Thanks to Nirvana for making it
-                                        possible.
+                                        possible. Looking forward to use Nirvana
+                                        again !!
                                     </p>
                                 </div>
                             </div>

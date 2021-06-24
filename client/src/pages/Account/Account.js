@@ -63,6 +63,15 @@ export default function Account() {
                                 <Loading />
                             ) : (
                                 <div className={AccountCSS.packages}>
+                                    {packages.length === 0 && (
+                                        <div>
+                                            <em>
+                                                No packages, go to{" "}
+                                                <strong>Places</strong> to
+                                                create one !
+                                            </em>
+                                        </div>
+                                    )}
                                     {packages.map((p) => (
                                         <PackageCard
                                             key={p.id}

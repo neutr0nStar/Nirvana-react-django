@@ -40,13 +40,13 @@ export default function TailorPackage() {
                             }
                         )
                         .then(() => window.alert("Tour successfully booked !!"))
-                        .then(() => history.push("/"))
+                        .then(() => history.push("/account"))
                         .catch((err) => console.log(err));
                 } else {
-                    setErr("Invalid number of people");
+                    setErr("Number of people should be between 1 and 8");
                 }
             } else {
-                setErr("Invalid number of days");
+                setErr("Number of days should be between 3 and 10");
             }
         } else {
             setErr("Invalid date");
@@ -58,7 +58,7 @@ export default function TailorPackage() {
             .get("/api/place/" + id)
             .then((res) => setPlace(res.data))
             .then(() => setLoading(false))
-            .catch((err) => console.log("here"));
+            .catch((err) => console.log(err));
     }, [id]);
 
     return (

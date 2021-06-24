@@ -19,7 +19,7 @@
     backdrop-filter: blur(8px);
     width: 85vw;
     border-radius: 2rem;
-    /* min-height: 100vh; */
+    min-height: 60vh;
     height: min-content;
     padding: 2rem;
 }
