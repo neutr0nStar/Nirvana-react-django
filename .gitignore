@@ -1,2 +1,4 @@
 client/node_modules
 server/.venv
+server/api/__pycache__
+server/Pipfile.lock

@@ -1,6 +1,11 @@
 import React from "react";
 import FooterCss from "./Footer.module.css";
 
+/**
+ * Footer component
+ * very basic footer, with a back to top button
+ */
+
 function Footer() {
     return (
         <div className={FooterCss.root}>

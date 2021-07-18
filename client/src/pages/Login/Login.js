@@ -5,6 +5,11 @@ import axios from "axios";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
+/**
+ * Login Page
+ * On successful login, a token is recieved from backend, and stored in local storage
+ */
+
 export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -13,10 +18,12 @@ export default function Login() {
     const [loading, setLoading] = useState(false);
     const history = useHistory();
 
+    // If already logged in, redirect to accounts
     if (localStorage.nirvanaToken) {
         history.push("/account");
     }
 
+    // Send username and password entered by user to backend
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
@@ -27,6 +34,7 @@ export default function Login() {
                 password,
             })
             .then((res) => {
+                // If username and password are correct, store it in state token
                 setToken(res.data.token);
             })
             .catch((err) => {
@@ -37,6 +45,8 @@ export default function Login() {
 
     useEffect(() => {
         if (token) {
+            // if state token exists (user is logged in successfully),
+            // store token to localstorage
             localStorage.nirvanaToken = token;
             setLoading(false);
             history.push("/");

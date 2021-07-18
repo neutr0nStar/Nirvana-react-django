@@ -11,8 +11,20 @@ import About from "./pages/About/About";
 import Register from "./pages/Register/Register";
 import TailorPackage from "./pages/TailorPackage/TailorPackage";
 
+/**
+ * Entry point to app
+ * Routes:
+ *  '/' - Home
+ *  '/places' - Places
+ *  '/about' - About
+ *  '/login' - Signin
+ *  '/register' - Signup
+ *  '/account' - Account
+ *  '/tailorPackage/:id' - Tailor a tour package for the id of destination
+ */
+
 function App() {
-    AOS.init();
+    AOS.init(); // Initialize Animate on Scroll (AOS)
     document.title = "Nirvana";
     return (
         <Router>

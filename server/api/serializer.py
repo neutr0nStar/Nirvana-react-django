@@ -2,6 +2,10 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import Place, Package
 
+'''
+Serializers serialize models objects to be sent over through REST API
+'''
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User

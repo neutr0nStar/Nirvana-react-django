@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/*
+    Global stylesheet
+    Fonts: Monsterrat and Lobster
+*/
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    --accent-color: green;
-    --gradient-1: linear-gradient(315deg, #f2cf43 0%, #19a186 74%);
 }
 
 html { scroll-behavior: smooth; }
@@ -17,6 +20,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Hide the scroll bar */
 ::-webkit-scrollbar {
     display: none;
 }

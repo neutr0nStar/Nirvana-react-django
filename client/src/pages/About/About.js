@@ -3,6 +3,12 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import AboutCSS from "./About.module.css";
 
+/**
+ * About page
+ * Gives information about Nirvana
+ * and contact info
+ */
+
 export default function About() {
     return (
         <div className={AboutCSS.root}>

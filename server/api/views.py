@@ -12,11 +12,11 @@ from .serializer import UserSerializer, PackageSeializer, PlaceSerializer
 
 # Create your views here.
 
+# default route, tell user to user api
 def index(request):
     return HttpResponse("Use /api to use api")
 
-
-
+# get all places info
 @api_view(['GET'])
 def get_places(request):
     places = Place.objects.all()
@@ -24,7 +24,7 @@ def get_places(request):
     return Response(places_serialized.data)
 
 
-
+# get one place's info
 @api_view(['GET'])
 def get_place(request, pk):
     try:
@@ -35,6 +35,8 @@ def get_place(request, pk):
         return Response(status=404)
 
 
+# Create a package
+# user must be authenticated to do so
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_package(request):
@@ -59,7 +61,8 @@ def create_package(request):
     except:
         return Response(status=400)
 
-
+# delete a package
+# user must be authenticated to do so
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def delete_package(request, pk):
@@ -71,6 +74,7 @@ def delete_package(request, pk):
         return Response(status=400)
 
 
+# Get user's details
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user(request):
@@ -79,6 +83,7 @@ def get_user(request):
     return Response(user_serialized.data)
 
 
+# Get user's packages
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_packages(request):
@@ -87,7 +92,7 @@ def get_user_packages(request):
     serialized_packages = PackageSeializer(packages, many=True)
     return Response(serialized_packages.data)
 
-
+# Get a particular package
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_package(request, pk):
@@ -100,6 +105,7 @@ def get_user_package(request, pk):
         return Response(status=404)
 
 
+# Register a new user
 @api_view(['POST'])
 def register(request):
     try: 

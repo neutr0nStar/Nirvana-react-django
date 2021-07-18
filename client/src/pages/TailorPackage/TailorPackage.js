@@ -4,8 +4,14 @@ import { useParams, useHistory, Link } from "react-router-dom";
 import TailorPackageCSS from "./TailorPackage.module.css";
 import Loading from "../../components/Loading/Loading";
 
+/**
+ * Tailor package
+ * User can tailor a tour once logged in
+ * all data is checked if valid, and price is decided according to the data
+ */
+
 export default function TailorPackage() {
-    const { id } = useParams();
+    const { id } = useParams(); // place id from url parameters
     const history = useHistory();
     const isLogged = localStorage.nirvanaToken ? true : false;
     const [place, setPlace] = useState();
@@ -17,10 +23,14 @@ export default function TailorPackage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let price = 8000 * nop * nod;
+        let price = 8000 * nop * nod; // Price is 8000 per person per day
         if (startingDate !== "") {
+            // starting date is not empty
             if (nod > 2 && nod < 11) {
+                // number of days is atleast 3 and at max 10
                 if (nop > 0 && nop < 9) {
+                    // number of people is atleast 1 and at max 8
+                    // if all satisfied, create a package, store in db at backend
                     setErr("");
                     axios
                         .post(

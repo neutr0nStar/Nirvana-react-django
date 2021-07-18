@@ -7,20 +7,27 @@ import PlacesCSS from "./Places.module.css";
 import Footer from "../../components/Footer/Footer";
 import PlaceModal from "../../components/PlaceModal/PlaceModal";
 
+/**
+ * Places
+ * displays available places to visit
+ * available places are fetched from backend
+ */
+
 function Places() {
     const [places, setPlaces] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [openModalId, setOpenModalId] = useState(0);
+    const [openModalId, setOpenModalId] = useState(0); // 0 means no modal is open
 
     function handleClose() {
         setOpenModalId(0);
     }
 
-    function handleOpen(idx) {
-        console.log("open");
-        setOpenModalId(idx);
+    function handleOpen(id) {
+        // set open modal id to id of card clicked on
+        setOpenModalId(id);
     }
 
+    // Fetch places
     useEffect(() => {
         axios
             .get("/api/places")

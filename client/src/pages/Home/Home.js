@@ -3,6 +3,12 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import HomeCss from "./Home.module.css";
 
+/**
+ * Homepage
+ * Shows basic info about Nirvana
+ * CTA at bottom
+ */
+
 function Home() {
     return (
         <>

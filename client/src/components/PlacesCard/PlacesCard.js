@@ -1,6 +1,12 @@
 import React from "react";
 import PlacesCardCSS from "./PlacesCard.module.css";
 
+/**
+ * Places card
+ * card showing image of place with name of place at bottom left
+ * shown on places page
+ */
+
 function PlacesCard(props) {
     return (
         <div

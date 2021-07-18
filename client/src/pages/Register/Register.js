@@ -5,6 +5,11 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import RegisterCSS from "./Register.module.css";
 
+/**
+ * Register new user
+ * User need to enter valid credentials to create an account
+ */
+
 export default function Register() {
     const [firstName, setFirstname] = useState("");
     const [lastName, setLastname] = useState("");
@@ -17,6 +22,7 @@ export default function Register() {
     const [loading, setLoading] = useState(false);
     const [registerErr, setRegisterErr] = useState("");
 
+    // If already logged in, redirect to homepage
     const history = useHistory();
     if (localStorage.nirvanaToken) {
         history.push("/");
@@ -33,12 +39,17 @@ export default function Register() {
                 username.length ===
             0
         ) {
+            // check if any field is empty
             setRegisterErr("Fields cannot be left empty");
         } else if (password.length < 6) {
+            // check if password length is atleast 6 character
             setRegisterErr("Password too short");
         } else if (password !== password2) {
+            // check if password and confirm password match
             setRegisterErr("Passwords don't match");
         } else {
+            // If all above conditions are satisfied, data is valid
+            // create new user
             axios
                 .post("/api/auth/register", {
                     username,
@@ -49,6 +60,7 @@ export default function Register() {
                 })
                 .then((res) => {
                     setLoading(true);
+                    // recieve token after successfull registeration
                     setToken(res.data.token);
                 })
                 .catch((err) =>
@@ -57,6 +69,7 @@ export default function Register() {
         }
     };
 
+    // store token in localstorage
     useEffect(() => {
         if (token) {
             localStorage.nirvanaToken = token;

@@ -2,6 +2,12 @@ import React from "react";
 import NavbarCSS from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
+/**
+ * Navbar component
+ * contains link to other pages
+ * changes dynamically depending on wheter user is logged in or not
+ */
+
 function Navbar(props) {
     return (
         <div>

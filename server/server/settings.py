@@ -38,15 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # User's app
     'api.apps.ApiConfig',
+
+    # For rest api
     'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
 ]
 
+# rest framework config: token auth, and setting default permisions
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-               'rest_framework.authentication.TokenAuthentication',
+                'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES':(
                 'rest_framework.permissions.AllowAny',
@@ -65,6 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# allow react app (localhost:3000)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000"
 ]

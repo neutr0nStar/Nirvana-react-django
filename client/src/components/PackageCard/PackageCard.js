@@ -2,12 +2,19 @@ import React from "react";
 import axios from "axios";
 import PackageCardCSS from "./PackageCard.module.css";
 
+/**
+ * Package card
+ * shown in account section
+ */
+
 export default function PackageCard({ id, title, sd, nod, nop, price }) {
     const handleDelete = () => {
+        // allow user to delete a tour
         let choice = window.confirm(
             "Are you sure you want to cancel the trip ?"
         );
         if (choice) {
+            // send request to backend to delete it
             axios
                 .get("api/deletePackage/" + id, {
                     headers: {

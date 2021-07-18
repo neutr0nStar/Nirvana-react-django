@@ -3,8 +3,13 @@ import ReactDOM from "react-dom";
 import PlaceModalCSS from "./PlaceModal.module.css";
 import { Link } from "react-router-dom";
 
+/**
+ * Place modal
+ * Modal to show details of a place
+ */
+
 function PlaceModal({ isOpen, handleClose, bgUrl, placeID, name, desc }) {
-    if (!isOpen) return null;
+    if (!isOpen) return null; // if not open, don't render anything
     return ReactDOM.createPortal(
         <div className={PlaceModalCSS.modalbg}>
             <div

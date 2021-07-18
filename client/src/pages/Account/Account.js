@@ -7,22 +7,32 @@ import Loading from "../../components/Loading/Loading";
 import AccountCSS from "./Account.module.css";
 import PackageCard from "../../components/PackageCard/PackageCard";
 
+/**
+ * Accounts
+ * Displays packages for the user
+ * And has the logout button
+ */
+
 export default function Account() {
     const [user, setUser] = useState();
     const [packages, setPackages] = useState();
     const [loadingUser, setLoadingUser] = useState(true);
     const [loadingPackages, setLoadingPackages] = useState(true);
     const history = useHistory();
+
+    // If user is not logged in, redirect to homepage
     if (!localStorage.nirvanaToken) {
         history.push("/");
     }
 
+    // Remove token from localstorage on logout
     const handleLogout = () => {
         localStorage.removeItem("nirvanaToken");
         history.push("/");
     };
 
     useEffect(() => {
+        // Fetch user data
         axios
             .get("/api/auth/getUser", {
                 headers: {
@@ -33,6 +43,7 @@ export default function Account() {
             .then(() => setLoadingUser(false))
             .catch((err) => console.log(err));
 
+        // Fetch user packages
         axios
             .get("/api/packages", {
                 headers: {
