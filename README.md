@@ -1,6 +1,8 @@
 
 # Nirvana
 
+<img src="./screenshots/screenshot (1).png" width="100%" />
+
 Nirvana is a tourism site I made for my college project. This a site for nature lovers which allows you to tailor a tour as per your needs
 
 ## Tech stacks used
